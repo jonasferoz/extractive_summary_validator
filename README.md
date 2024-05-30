@@ -93,6 +93,7 @@ Initializes a new instance of the Validator class.
 
 **Parameters**
 - **`threshold`** *(int)*: The minimum fuzz ratio to be considered summarized.  Defaults to 85.
+- **`filepaths`** *(str)*: The filepaths of the original document and the extracted summary sentences. NOTE - using the playground, only one file can be uploaded at a time.
 - **`on_fail`** *(str, Callable)*: The policy to enact when a validator fails. If `str`, must be one of `reask`, `fix`, `filter`, `refrain`, `noop`, `exception` or `fix_reask`. Otherwise, must be a function that is called when the validator fails.
 </ul>
 <br/>
@@ -109,9 +110,5 @@ Note:
 **Parameters**
 - **`value`** *(Any)*: The input value to validate.
 - **`metadata`** *(dict)*: A dictionary containing metadata required for validation. Keys and values must match the expectations of this validator.
-    
-    
-    | Key | Type | Description | Default |
-    | --- | --- | --- | --- |
-    | `filepaths` | list[str] | A list of strings that specifies the filepaths for any documents that should be used for asserting the summary's similarity. | N/A |
+
 </ul>
